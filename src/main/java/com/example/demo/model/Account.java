@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -26,5 +27,6 @@ public class Account {
 
     @ManyToOne
     @JoinColumn(name="customer_id", nullable=false)
+    @JsonIgnore
     private Customer customer;
 }
